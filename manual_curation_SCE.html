@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_code.asp">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<!-- HTML5 and CSS code adapted from W3Schools -->
+<style>
+
+body {background-color: white;
+  font-family: Garamond, Baskerville, "Baskerville Old Face";
+  font-size: 20px;
+  color: black;
+}
+h1 {font-family: Garamond, Baskerville, "Baskerville Old Face";
+    font-size: 60px;
+    text-align: center;
+}
+h2 {
+    font-family: Garamond, Baskerville, "Baskerville Old Face";
+    font-size: 30px;
+}
+h3 {
+    font-family: Garamond, Baskerville, "Baskerville Old Face";
+    font-size: 20px;
+}
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-family: Garamond, Baskerville, "Baskerville Old Face";
+  font-size: 12px;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.dropbtn {
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: darkgreen;}
+
+.section {
+  padding: 50px;
+}
+
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.column2 {
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+
+.footer {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px;
+}
+
+</style>
+</head>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Main</a>
+      <a href="about.html" class="w3-bar-item w3-button">About</a>
+      <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
+      <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Main</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="manual_curation_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Curation</a>
+  <a href="literature_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Literature</a>
+</nav>
+<div class="section">
+<div class="column1" style="background-color:white;">
+<div class="dropdown">
+  <br/><br/>
+  <button class="dropbtn">Select Aging Hallmark</button>
+  <div class="dropdown-content">
+    <a href="manual_curation_GI.html">Genomic Instability</a>
+    <a href="manual_curation_TA.html">Telomere Attrition</a>
+    <a href="manual_curation_EA.html">Epigenetic Alterations</a>
+    <a href="manual_curation_LOP.html">Loss of Proteostasis</a>
+    <a href="manual_curation_DNS.html">Deregulated Nutrient Sensing</a>
+    <a href="manual_curation_MD.html">Mitochondrial Dysfunction</a>
+    <a href="manual_curation_CS.html">Cellular Senescence</a>
+    <a href="manual_curation_SCE.html">Stem Cell Exhaustion</a>
+    <a href="manual_curation_AIC.html">Altered Intercellular Communication</a>
+  </div>
+</div>
+</div>
+<div class="column2" style="background-color:white;">
+<div style="text-align:left;">
+  <br>
+      <h2><b>Stem Cell Exhaustion</h2></b>
+        <ul>
+      <li>In this bipartite graph, the stem cell exhaustion aging hallmark (centre) is connected to age-related diseases.</li>
+      <li> The edges represent associations that have been verified by manual curation.</li>
+      <li> The weight of the edges represents the scored association between the aging hallmark and the age-related disease.</li>
+      <li>To view manual curation results for different aging hallmarks, navigate from the drop-down list on the left.</li> 
+    </ul>
+<div class ="center2">
+<svg width="800" height="600"></svg>
+</div>
+</div>
+</div>
+<div class="footer">
+  <br><br><br>
+  <p>Institute of Healthy Aging, University College London (UCL) </p>
+  <p> Contact us: helen.fraser.14@ucl.ac.uk </p>
+  <p> Code for bipartite graphs adapted from https://d3js.org/, Copyright 2020 Mike Bostock.</p>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// Script for bipartite graphs adapted from https://d3js.org/, Copyright 2020 Mike Bostock.
+
+function distance() {
+  return 2000;}
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2));
+
+d3.json("https://raw.githubusercontent.com/ucbtchf07/bipartite_graphs/main/graphFile_SCE.json?raw=TRUE", function(error, graph) {
+  if (error) throw error;
+
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter().append("line")
+      .attr("stroke-width", function(d) { return (d.value); });
+
+  var node = svg.append("g")
+      .attr("class", "nodes")
+    .selectAll("g")
+    .data(graph.nodes)
+    .enter().append("g")
+    
+  var circles = node.append("circle")
+      .attr("r", 8)
+      .attr("fill", function(d) { return color(d.group); })
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
+
+  var lables = node.append("text")
+      .text(function(d) {
+        return d.id;
+      })
+      .attr('x', 7)
+      .attr('y', 3);
+
+  node.append("title")
+      .text(function(d) { return d.id; });
+
+  simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+  simulation.force("link")
+      .links(graph.links);
+
+  function ticked() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node
+        .attr("transform", function(d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        })
+  }
+});
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3);
+  d.fx = null;
+  d.fy = null;
+}
+
+</script>
+</div>
+</body>
+</html>
