@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_code.asp">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	<html lang="EN">
+	<!-- HTML5 and CSS code adapted from W3Schools -->
+	<title>Aging Hallmark Database</title>
+		<style>
+			body {background-color: white;
+				font-family: Garamond, Baskerville, "Baskerville Old Face";
+				font-size: 20px;
+				color: black;
+			}
+			h1 {
+				font-family: Garamond, Baskerville, "Baskerville Old Face";
+				font-size: 45px;
+				text-align: center;
+			}
+			h2 {
+				font-family: Garamond, Baskerville, "Baskerville Old Face";
+				font-size: 20px;
+				text-align: center;
+			}
+			ul {
+				font-family: Garamond, Baskerville, "Baskerville Old Face";
+				font-size: 25px;
+			}
+			.w3-bar .w3-button {
+				padding: 16px;
+			}
+			.center {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+			}
+			.section {
+				padding: 50px;
+			}
+			.footer {
+				background-color: rgba(225, 225, 225, 0.75);
+				color: black;
+				text-align: center;
+				font-size: 16px;
+				padding: 15px;
+			}
+		</style>
+	</head>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Main</a>
+      <a href="about.html" class="w3-bar-item w3-button">About</a>
+      <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
+      <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Main</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="manual_curation_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Curation</a>
+  <a href="literature_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Literature</a></nav>
+</nav>
+<div class="section"><br>
+		<h1><b>AgingHallmarkDB</h1></b>
+		<ul>
+			<li>The nine "Hallmarks of Aging" were defined in a landmark publicaiton by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3836174">Lopez-Otin <i>et al.</i> (2013)</a></li>
+			<li>Aging hallmarks are common denominators of the aging process. Each aging hallmark is listed below:</li>
+		</ul>
+		<img src="static/Hallmarks.png" alt="image describing the aging hallmarks" class="center"/>
+		<ul>
+			<li>Age is a major risk factor for many chronic and deadly diseases, which are collectively known as Age-Related Diseases (ARDs). Age-related diseases were recently defined by <a href="https://pubmed.ncbi.nlm.nih.gov/33536532">Kuan V., Fraser HC <i>et al</i>. (2021).</a></li>
+			<li>Aging hallmarks are known to contribute to individual age-related diseases in humans.</li>
+			<li>However, not every aging hallmark is associated with every age-related disease.</li>
+			<li>Each aging hallmark has a greater role in the development and disordered physiology of certain age-related diseases and a lesser or no role in others.</li>
+		</ul>
+		<img src ="static/AH_ARD.png" alt="image linking aging hallmarks to diseases" class="center"/>
+		<ul>
+			<li>This website displays the current literature evidence for the role of each aging hallmark in the development or disordered physiology of an age-related disease.</li>
+		</ul>
+	</div>
+	<div class="footer">
+		<p>Institute of Healthy Aging, University College London (UCL) </p>
+	</div>
+</body>
+</html>
