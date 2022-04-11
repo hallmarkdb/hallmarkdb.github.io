@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_code.asp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <!-- HTML5 and CSS code adapted from W3Schools -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .column1 {
+      float: left;
+      width: 65%;
+      padding: 10px;
+    }
+
+    .column2 {
+      float: left;
+      width: 35%;
+      padding: 10px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    h1 {
+      font-family: Garamond, Baskerville, "Baskerville Old Face";
+      font-size: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: Garamond, Baskerville, "Baskerville Old Face";
+      font-size: 25px;
+      text-align: center;
+    }
+
+    h3 {
+      font-family: Garamond, Baskerville, "Baskerville Old Face";
+      font-size: 25px;
+      text-align: left;
+      font-weight: bold;  
+    }
+
+    body {
+      background-color: white;
+      font-family: Garamond, Baskerville, "Baskerville Old Face";
+      font-size: 23px;
+      color: black;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+
+    .button {
+      border: black;
+      color: black;
+      padding: 10px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer; 
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .button1 {
+      border: 1px solid black;
+      background-color: rgb(175,238,238)
+    }
+
+    .section {
+      padding: 50px;
+    }
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .center2 {
+      text-align: center;
+    }
+
+    .footer {
+      background-color: rgba(225, 225, 225, 0.75);
+      color: black;
+      text-align: center;
+      font-size: 16px;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
+      <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Main</a>
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
+        <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+      </div>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Main</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="manual_curation_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Curation</a>
+  <a href="literature_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Literature</a></nav>
+<div class="section">
+<div>
+    </br>
+    <h1><b>AgingHallmarkDB</h1></b>
+    <h2>Linking Aging Hallmarks to Age-Related Diseases using the Biomedical Literature</h2>
+</div>
+<div class="row">
+  <div class="column1" style="background-color:white;">
+    <img src="static/Aging_Hallmarks_ARDs.png" alt="image of aging hallmark taxonomy">
+    <h2><b>Figure 1.</b> Linking aging hallmarks to age-related diseases using supervised machine learning and manual curation.</h2>
+  </div>
+  <div class="column2" style="background-color:white;">
+    <h3>Features:</h3>
+    <ul>
+    	<li>We use manual curation to confirm aging hallmark-age-related disease (ARD) associations.</li>
+      <div class ="center2">
+        <button style="width:200px" onclick="location.href='manual_curation_GI.html'" class="button1">Manual Curation</button></div></br>
+      <li>We use supervised machine learning to identify sentences in literature that report an aging hallmark (AH) contributes to the development or disordered physiology of a disease.</li>
+      <div class ="center2">
+        <button style="width:200px" onclick="location.href='literature_GI.html'" class="button1">AH-ARD literature</button>
+      </div></br>
+      <li>To learn more about aging hallmark-ARD associations and our site, click below.</li>
+      <div class="center2">
+        <button style="width:200px" onclick="location.href='about.html'" class="button1">Learn More</button>
+      </div></br>
+    </ul>
+  </div>
+</div>
+</div>
+<div class="footer">
+  <p>Institute of Healthy Aging, University College London (UCL) </p>
+  <p> Images obtained from Shutterstock and Adobe Stock after obtaining a standard license </p>
+  <p> Contact us: helen.fraser.14@ucl.ac.uk </p>
+</div>
+</body>
+</html>
