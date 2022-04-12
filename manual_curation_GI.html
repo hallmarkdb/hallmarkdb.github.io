@@ -87,7 +87,7 @@ text {
 
 .column1 {
   float: left;
-  width: 10%;
+  width: 100%;
   padding: 0px;
 }
 
@@ -146,6 +146,7 @@ text {
       <li>The weight of the edges represents the scored association between the aging hallmark and the age-related disease.</li>
       <li>To view manual curation results for different aging hallmarks, navigate from the drop-down list on the left.</li> 
     </ul>
+<div class="column1">
 <svg width="800" height="600"></svg>
 </div>
 <div class="footer">
@@ -171,7 +172,7 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
     .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
+    .force("center", d3.forceCenter(width / 3, height / 2));
 
 d3.json("https://raw.githubusercontent.com/ucbtchf07/bipartite_graphs/main/graphFile_GI.json?raw=TRUE", function(error, graph) {
   if (error) throw error;
