@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_code.asp">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-	<html lang="EN">
-	<!-- HTML5 and CSS code adapted from W3Schools -->
+<!-- HTML5 and CSS code adapted from W3Schools -->
 	<title>Aging Hallmark Database</title>
 		<style>
 			body {background-color: white;
@@ -53,42 +51,50 @@
 		</style>
 	</head>
 <body>
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
-    <div class="w3-right w3-hide-small">
-      <a href="index.html" class="w3-bar-item w3-button">Main</a>
-      <a href="about.html" class="w3-bar-item w3-button">About</a>
-      <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
-      <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+<!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
+      <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Main</a>
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
+        <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+      </div>
     </div>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+	<a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Main</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+  <a href="manual_curation_GI.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Curation</a>
+  <a href="literature_GI.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Literature</a>
 </div>
-
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Main</a>
-  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="manual_curation_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Curation</a>
-  <a href="literature_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Literature</a></nav>
-</nav>
+<div class="section">
+<div>
 <div class="section"><br>
 		<h1><b>AgingHallmarkDB</h1></b>
 		<ul>
 			<li>The nine "Hallmarks of Aging" were defined in a landmark publicaiton by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3836174">Lopez-Otin <i>et al.</i> (2013)</a></li>
 			<li>Aging hallmarks are common denominators of the aging process. Each aging hallmark is listed below:</li>
-		</ul>
-		<img src="static/Hallmarks.png" alt="image describing the aging hallmarks" class="center"/>
-		<ul>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <img src="static/Hallmarks1.png" class="w3-round w3-margin-bottom" alt="Aging hallmarks1" style="width:100%">
+      </div>
+      <div class="w3-third">
+        <img src="static/Hallmarks2.png" class="w3-round w3-margin-bottom" alt="Aging hallmarks2" style="width:100%">
+      </div>
+      <div class="w3-third">
+        <img src="static/Hallmarks3.png" class="w3-round" alt="aging hallmarks3" style="width:96%">
+      </div>
+    </div>
 			<li>Age is a major risk factor for many chronic and deadly diseases, which are collectively known as Age-Related Diseases (ARDs). Age-related diseases were recently defined by <a href="https://pubmed.ncbi.nlm.nih.gov/33536532">Kuan V., Fraser HC <i>et al</i>. (2021).</a></li>
 			<li>Aging hallmarks are known to contribute to individual age-related diseases in humans.</li>
 			<li>However, not every aging hallmark is associated with every age-related disease.</li>
 			<li>Each aging hallmark has a greater role in the development and disordered physiology of certain age-related diseases and a lesser or no role in others.</li>
 		</ul>
-		<img src ="static/AH_ARD.png" alt="image linking aging hallmarks to diseases" class="center"/>
+		<img src ="static/AH_ARD.png" alt="image linking aging hallmarks to diseases" class="center" style="width: 100%"/>
 		<ul>
 			<li>This website displays the current literature evidence for the role of each aging hallmark in the development or disordered physiology of an age-related disease.</li>
 		</ul>
@@ -96,5 +102,23 @@
 	<div class="footer">
 		<p>Institute of Healthy Aging, University College London (UCL) </p>
 	</div>
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
