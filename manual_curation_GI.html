@@ -147,7 +147,7 @@ text {
       <li>To view manual curation results for different aging hallmarks, navigate from the drop-down list on the left.</li> 
     </ul>
 <div class="column1">
-<svg width="800" height="600"></svg>
+<svg width="700" height="500"></svg>
 </div>
 <div class="footer">
   <br><br><br>
@@ -168,7 +168,7 @@ var svg = d3.select("svg"),
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(225))
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 3, height / 2));
 
