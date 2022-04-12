@@ -82,7 +82,7 @@ text {
 .dropdown:hover .dropbtn {background-color: darkgreen;}
 
 .section {
-  padding: 50px;
+  padding: 5px;
 }
 
 .column1 {
@@ -106,32 +106,29 @@ text {
 </style>
 </head>
 <body>
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
-    <div class="w3-right w3-hide-small">
-      <a href="index.html" class="w3-bar-item w3-button">Main</a>
-      <a href="about.html" class="w3-bar-item w3-button">About</a>
-      <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
-      <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+<!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
+      <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Main</a>
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
+        <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
+      </div>
     </div>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Main</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+  <a href="manual_curation_GI.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Curation</a>
+  <a href="literature_GI.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Literature</a>
 </div>
-
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Main</a>
-  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="manual_curation_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Curation</a>
-  <a href="literature_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Literature</a>
-</nav>
 <div class="section">
-<div class="column1" style="background-color:white;">
 <div class="dropdown">
-  <br/><br/>
+  <br/><br/><br>
   <button class="dropbtn">Select Aging Hallmark</button>
   <div class="dropdown-content">
     <a href="manual_curation_GI.html">Genomic Instability</a>
@@ -145,8 +142,6 @@ text {
     <a href="manual_curation_AIC.html">Altered Intercellular Communication</a>
   </div>
 </div>
-</div>
-<div class="column2" style="background-color:white;">
 <div style="text-align:left;">
   <br>
       <h2><b>Genomic Instability</h2></b>
@@ -156,10 +151,7 @@ text {
       <li>The weight of the edges represents the scored association between the aging hallmark and the age-related disease.</li>
       <li>To view manual curation results for different aging hallmarks, navigate from the drop-down list on the left.</li> 
     </ul>
-<div class ="center2">
 <svg width="800" height="600"></svg>
-</div>
-</div>
 </div>
 <div class="footer">
   <br><br><br>
@@ -257,6 +249,23 @@ function dragended(d) {
   d.fy = null;
 }
 
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 </script>
 </div>
 </body>
