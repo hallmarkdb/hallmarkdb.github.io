@@ -87,7 +87,7 @@
     }
 
     .section {
-      padding: 50px;
+      padding: 5px;
     }
     
     img {
@@ -109,8 +109,10 @@
   </style>
 </head>
 <body>
+<!-- Navbar -->
   <div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <div class="w3-bar w3-white w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="index.html" class="w3-bar-item w3-button w3-wide">AgingHallmarkDB</a>
       <div class="w3-right w3-hide-small">
         <a href="index.html" class="w3-bar-item w3-button">Main</a>
@@ -118,29 +120,35 @@
         <a href="manual_curation_GI.html" class="w3-bar-item w3-button">Curation</a>
         <a href="literature_GI.html" class="w3-bar-item w3-button">Literature</a>
       </div>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-      </a>
     </div>
   </div>
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Main</a>
-  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="manual_curation_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Curation</a>
-  <a href="literature_GI.html" onclick="w3_close()" class="w3-bar-item w3-button">Literature</a></nav>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Main</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+  <a href="manual_curation_GI.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Curation</a>
+  <a href="literature_GI.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Literature</a>
+</div>
 <div class="section">
 <div>
-    </br>
+    </br></br>
     <h1><b>AgingHallmarkDB</h1></b>
     <h2>Linking Aging Hallmarks to Age-Related Diseases using the Biomedical Literature</h2>
 </div>
-<div class="row">
-  <div class="column1" style="background-color:white;">
-    <img src="static/Aging_Hallmarks_ARDs.png" alt="image of aging hallmark taxonomy">
-    <h2><b>Figure 1.</b> Linking aging hallmarks to age-related diseases using supervised machine learning and manual curation.</h2>
+<div>
+      <div class="w3-third">
+        <img src="static/Aging_Hallmarks_ARDs1.png" class="w3-round w3-margin-bottom" alt="Aging hallmarks1" style="width:98%">
+      </div>
+      <div class="w3-third">
+        <img src="static/arrow.png" class="w3-round w3-margin-bottom" alt="Aging hallmarks2" style="width:100%">
+      </div>
+      <div class="w3-third">
+        <img src="static/Aging_Hallmarks_ARDs3.png" class="w3-round" alt="aging hallmarks3" style="width:100%">
+      </div>
   </div>
-  <div class="column2" style="background-color:white;">
+  <div>
+          <h2><b>Figure 1.</b> Linking aging hallmarks to age-related diseases using supervised machine learning and manual curation.</h2></div>
+  <div>
     <h3>Features:</h3>
     <ul>
     	<li>We use manual curation to confirm aging hallmark-age-related disease (ARD) associations.</li>
@@ -155,7 +163,6 @@
         <button style="width:200px" onclick="location.href='about.html'" class="button1">Learn More</button>
       </div></br>
     </ul>
-  </div>
 </div>
 </div>
 <div class="footer">
@@ -163,5 +170,25 @@
   <p> Images obtained from Shutterstock and Adobe Stock after obtaining a standard license </p>
   <p> Contact us: helen.fraser.14@ucl.ac.uk </p>
 </div>
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
